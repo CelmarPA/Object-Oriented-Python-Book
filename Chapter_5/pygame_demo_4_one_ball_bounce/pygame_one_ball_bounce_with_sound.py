@@ -1,6 +1,6 @@
-# pygame_one_ball_bounce_rects.py
+# pygame_one_ball_bounce_with_sounds.py
 
-# pygame demo 4(b) - one image, bounce around the window using rects
+# # pygame demo 4(c), one image, bounce around the window - with sound
 
 # 1 - Import packages
 import pygame
@@ -22,6 +22,9 @@ clock: pygame.time.Clock = pygame.time.Clock()
 
 # 4 - Load assets: image(s), sound(s), etc.
 ball_image: pygame.Surface = pygame.image.load("images/ball.png")
+bounce_sound: pygame.mixer.Sound = pygame.mixer.Sound("sounds/boing.wav")
+pygame.mixer.music.load("sounds/background.mp3")
+pygame.mixer.music.play(-1, 0.0)
 
 # 5 - Initialize variables
 ball_rect: pygame.Rect = ball_image.get_rect()
@@ -45,9 +48,11 @@ while True:
     # 8 - Do any "per frame" actions
     if (ball_rect.left < 0) or (ball_rect.right >= WINDOW_WIDTH):
         x_speed *= -1   # reverse X direction
+        bounce_sound.play()
 
     if (ball_rect.top < 0) or (ball_rect.bottom >= WINDOW_HEIGHT):
         y_speed *= -1   # reverse Y direction
+        bounce_sound.play()
 
     # Update the ball's rectangle using the speed in two directions
     ball_rect.left += x_speed
@@ -64,20 +69,3 @@ while True:
 
     # 12 - Slow things down a bit
     clock.tick(FRAMES_PER_SECOND)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
