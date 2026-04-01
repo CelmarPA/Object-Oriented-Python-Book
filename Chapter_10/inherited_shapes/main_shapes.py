@@ -1,4 +1,6 @@
-# main_shapes_example.py
+# main_shapes.py
+
+# Main Shapes program
 
 import sys
 from pygame.locals import *
@@ -8,17 +10,17 @@ from triangle import *
 import pygwidgets
 
 
-# Set up the constants
+# set up the constants
 WHITE: tuple[int] = (255, 255, 255)
 WINDOW_WIDTH: int = 640
 WINDOW_HEIGHT: int = 480
 FRAMES_PER_SECOND: int = 30
 N_SHAPES: int = 10
 
-# Set up the window
+# set up the window
 pygame.init()
-window: pygame.Surface = pygame.display.set_mode((WINDOW_WIDTH, WINDOW_HEIGHT), 0 , 32)
-clock: pygame.time.Clock = pygame.time.Clock()
+window = pygame.display.set_mode((WINDOW_WIDTH, WINDOW_HEIGHT), 0, 32)
+clock = pygame.time.Clock()
 
 shapes_list: list = []
 shapes_classes_tuple: tuple = (Square, Circle, Triangle)
@@ -40,7 +42,7 @@ while True:
 
         if event.type == MOUSEBUTTONDOWN:
             # Reverse order to check last drawn shape first
-            for o_shape in reversed(shapes_list):
+            for o_shape in shapes_list:
                 if o_shape.clicked_inside(event.pos):
                     area = o_shape.get_area()
                     area: str = str(area)
