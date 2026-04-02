@@ -1,10 +1,8 @@
 # rectangle.py
-import pygame
 
 # Rectangle class
 
 from shape import *
-
 
 class Rectangle(Shape):
 
