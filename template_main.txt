@@ -1,0 +1,25 @@
+# Template main
+
+# 1 - Import packages
+
+# 2 - Define constants
+
+# 3 - Initialize the world
+
+# 4 - Load assets: image(s), sounds,  etc.
+
+# 5 - Initialize variables
+
+# 6 - Loop forever
+
+    # 7 - Check for and handle events
+
+    # 8 - Do any "per frame" actions
+
+    # 9 - Clear the screen
+
+    # 10 - Draw all screen elements
+
+    # 11 - Update the screen
+
+    # 12 - Slow things down a bit
