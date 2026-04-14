@@ -1,11 +1,10 @@
 # scene_play.py
 import pygame.mouse
 #  Play scene - the main game play scene
-from pygame import Surface
 from pygame.event import Event
 from pygame.key import ScancodeWrapper
 from pygame.mixer import Sound
-from pygwidgets import Image, DisplayText, CustomButton, TextCheckBox
+from pygwidgets import DisplayText, CustomButton, TextCheckBox
 from pyghelpers import Scene, customYesNoDialog
 from player import *
 from baddies import *
@@ -229,6 +228,3 @@ class ScenePlay(Scene):
 
     def leave(self) -> None:
         pygame.mixer.music.stop()
-
-
-        

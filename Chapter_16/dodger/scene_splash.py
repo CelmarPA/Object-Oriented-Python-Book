@@ -51,7 +51,7 @@ class SceneSplash(Scene):
             elif self.high_scores_button.handleEvent(event):
                 self.goToScene(SCENE_HIGH_SCORES)
 
-    def draw(self):
+    def draw(self) -> None:
         self.background_image.draw()
         self.dodger_image.draw()
         self.start_button.draw()
