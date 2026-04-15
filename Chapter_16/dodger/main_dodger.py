@@ -12,8 +12,7 @@ import os
 # The next line is here just in case you are running from the command line
 os.chdir(os.path.dirname(os.path.abspath(__file__)))
 
-import pygame
-from pygame import Surface
+
 from pyghelpers import SceneMgr
 from scene_splash import *
 from scene_play import *
